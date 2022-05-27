@@ -6,7 +6,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { selectedproduct } from "../redux/actions";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "./Footer"
 import { navCart } from "../redux/actions";
 
 export const Productdetail = () => {
@@ -79,6 +79,7 @@ export const Productdetail = () => {
           </Button>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
