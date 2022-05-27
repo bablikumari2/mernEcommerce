@@ -83,7 +83,7 @@ export const Login = () => {
           variant="contained"
           type="submit"
           fullWidth
-          onClick={() => navigate("/")}
+         
         >
           Submit
         </Button>
