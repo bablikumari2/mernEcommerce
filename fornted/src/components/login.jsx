@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Login_detail } from "../redux/actions";
+import Footer from "./Footer";
 
 export const Login = () => {
   const [showerr, setShowerr] = useState(false);
@@ -96,6 +97,7 @@ export const Login = () => {
         </div>
         <ToastContainer />
       </Box>
+      <Footer/>
     </>
   );
 };
