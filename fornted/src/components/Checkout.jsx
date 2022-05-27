@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Navigate, useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { navCart } from "../redux/actions";
+import Footer from "./Footer";
 
 export const Checkout = () => {
   const dispatch = useDispatch();
@@ -211,6 +212,7 @@ export const Checkout = () => {
       </div>
 
       <ToastContainer />
+      <Footer/>
     </>
   );
 };
