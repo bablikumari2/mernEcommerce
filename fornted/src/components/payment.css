@@ -1,0 +1,197 @@
+.container{
+    display:flex;
+    gap:80px
+}
+
+.Payment{
+    text-align: left;
+    display:flex
+}
+.masai{
+    font-size:40px;
+    margin-top:5px;
+    font-weight:500;
+    font-style:sans-serif;
+    padding-left:7px
+}
+.storee{
+    font-size:40px;
+    color: mediumseagreen;
+    padding-left:10px;
+    margin-top:5px;
+    font-weight:500;
+    font-style:sans-serif;
+}
+.dish{
+    text-align: left;
+}
+.dishname{
+    font-size:40px;
+    padding-left:35px;
+    margin-top:-10px;
+    font-weight:500;
+    font-style:sans-serif;
+}
+.ca{
+    color:grey;
+    padding-left:30px;
+}
+.button{
+    height:35px;
+    width:60px;
+    margin-left:390px;
+    background-color:#EEEEEE;
+
+    margin-top:25px;
+    border-radius:60px;
+    border:none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.userrr{
+    font-weight: 500;
+    padding-left: 30px;
+}
+.accordion{
+    display:flex;
+    margin-top:-20px
+}
+.delivery{
+    display:flex;
+    margin-left: 30px;
+    justify-content: space-between;
+    font-size:20px;
+    font-weight:500;
+}
+.Payment{
+    margin-left:30px;
+    
+   
+    
+}
+.method{
+    display:flex;
+    
+    font-size:17px;
+    font-style: sans-serif;
+    font-weight:500;
+}
+.item{
+    display:flex;
+    margin-left:30px;
+    font-size:22px;
+    font-style: sans-serif;
+    font-weight:500;
+}
+.item_btn{
+    height:45px;
+    width:130px;
+    margin-left:390px;
+    margin-top:25px;
+    border-radius:35%;
+    border:none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.product_name{
+    display:flex;
+    margin-left:30px;
+    justify-content:space-around;
+    font-weight:300px
+}
+#Remove{
+    width:60px;
+    height:25px;
+    margin-top:17px;
+
+}
+svg{
+    width:25px;
+    
+}
+.dish_detail{
+    width:200px;
+    margin-left:230px;
+    line-height: 35px;
+}
+.payment_detail{
+    width:45%;
+    
+    height:100%;
+    background-color:whitesmoke
+    
+}
+.place_order{
+  width:400px;
+  height:50px;
+  border-radius:3px;
+  background-color:black;
+  color:white;
+  font-size:20px;
+  font-family: sans-serif;
+  border:none;
+  margin-top: 200px;
+}
+.payment_order{
+    width:400px;
+    margin-left:100px;
+    margin-top: 80px;
+
+}
+.offer_line{
+    width:375px;
+    height:35px;
+    margin-left:120px;
+    margin-top:35px;
+    color:green;
+
+}
+.subtotal{
+    display:flex;
+    width:400px;
+    margin-left:100px;
+    justify-content:space-between;
+    font-size:18px;
+    font-weight:400;
+    line-height:10px
+}
+.tip{
+    width:400px;
+    margin-left:100px;
+    justify-content:space-between;
+    display:flex;
+    font-size:20px;
+    font-weight:500px;
+    font-style:sans-serif;
+    
+}
+.total{
+    display:flex;
+    justify-content:space-between;
+    margin-left:100px;
+    font-size: 30px;
+    font-weight:600;
+    font-family:sans-serif;
+}
+.add_tip{
+    font-size: 30px;
+    font-weight:600;
+    margin-top:40px;
+    font-family:sans-serif;
+}
+.tip_button{
+    display:flex;
+    justify-content:space-around;
+    margin-left:100px;
+    margin-top: 30px;
+    font-family:sans-serif;
+
+}
+.discount{
+    width:60px;
+    height:60px;
+    border-radius:30px;
+    border:none;
+    background-color:black;
+    color:white
+}

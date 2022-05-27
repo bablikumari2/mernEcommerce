@@ -1,0 +1,32 @@
+
+#X{
+    margin-left: 10px;
+    margin-top :10px;
+    border:none
+}
+.payment-methods{
+    display:flex;
+    cursor:pointer;
+    width:350px;
+    
+    height:50px;
+    
+    margin-left:25px;
+    font-size:17px;
+    
+    font-family: sans-serif;
+}
+img{
+    width:25px;
+    height:25px;
+    padding-top:15px; 
+}
+.line{
+    width:350px;
+    margin-left:25px;
+}
+.modal-box{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius:5px;
+    
+}
