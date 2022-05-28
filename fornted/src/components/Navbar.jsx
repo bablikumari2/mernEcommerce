@@ -87,7 +87,7 @@ export const Navbar = () => {
   }, []);
 
   const handleCartDetail = () => {
-    axios.get("https://ecommerce-masai.herokuapp.com/cartproduct").then(({ data }) => {
+    axios.get("https://mernbablicommerce.herokuapp.com/cartproduct").then(({ data }) => {
       setData(data);
     });
   };
