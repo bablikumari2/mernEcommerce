@@ -1,0 +1,59 @@
+.boxleft{
+    border: 2px solid gray;
+    width: 27%;
+    height: 75%;
+    margin-top: 18px;
+    margin-left: 585px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: ghostwhite;
+}
+.photo{
+    border: 1px solid green;
+    height: 210px;
+    background-image: url("https://imgs.search.brave.com/R71QWuv7TGUTLyYSbEfGj3ONxu-ihL74NYOIHe3vago/rs:fit:711:225:1/g:ce/aHR0cHM6Ly90c2Ux/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5t/V2ZoSXpJcU1rakpT/WTQ2eXJBS0tBSGFF/OCZwaWQ9QXBp");
+    border-radius: 20px;
+}
+.in{
+    width: 60%;
+    height: 30px;
+    /* border-radius: 10px; */
+    border: 3px solid;
+    text-align: center;
+    font-size: larger;
+}
+.small{
+    border: 3px solid;
+    height: 30px;
+    width: 30%;
+    margin-left: 20px;
+    
+    text-align: center;
+    font-size: larger;
+}
+/* .last{
+    width: 60%;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid;
+    color: white;
+    background-color: black;
+} */
+.comfirm{
+    border-radius: 20px;
+    padding: 10px 9%;
+    /* margin-left: 210px; */
+    margin-top: 18px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.comfirm:hover{
+    background-color: rgb(68, 21, 221);
+    border: 2.5px solid black;
+    color: black;
+}

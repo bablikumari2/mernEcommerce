@@ -104,7 +104,7 @@ export const Cart = () => {
           <hr></hr>
 
 
-          <div className="Payment">
+          {/* <div className="Payment">
             <p>Payment</p>
           </div>
           <div style={{ marginLeft: "30px" }}>
@@ -121,7 +121,7 @@ export const Cart = () => {
               </button>
             </div>
             <hr></hr>
-          </div>
+          </div> */}
           <div style={{ marginLeft: "30px" }}>
            
             <hr></hr>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
 import "./productdetail.css";
 import { Stack, Rating, Typography, Button } from "@mui/material";
 import axios from "axios";
@@ -77,6 +77,15 @@ export const Productdetail = () => {
           >
             Add to Cart
           </Button>
+         <Link to={"/product"}> <Button
+           variant="contained"
+           sx={{
+             bgcolor: "purple",
+             fontFamily: "sans-serif",
+             marginTop: "20px",
+             marginLeft:"50px",
+             mb: "30px",
+           }}>back</Button></Link>
         </div>
       </div>
       <Footer/>

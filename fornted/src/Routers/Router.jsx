@@ -7,9 +7,10 @@ import {Productdetail} from '../components/Productdetail'
 import { Signup } from '../components/Signup';
 import { Login } from '../components/login';
 import { Cart } from '../components/Cart';
-import  Footer  from '../components/Footer';
+
 import { Checkout } from '../components/Checkout';
 import { Showuser } from '../components/Showuser';
+import {Debit} from "../components/Pay"
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
    <Routes>
      <Route path="/" element={<Home />} />
      <Route path="/product" element={<Productpage />} />
+     <Route path="/payment" element={<Debit/>} />
      <Route path="/product/:id" element={<Productdetail />} />
      <Route path="/register" element={<Signup />} />
      <Route path="/login" element={< Login/>} />
@@ -29,7 +31,7 @@ function Router() {
 
    </Routes> 
    
-    {/* <Footer /> */}
+   
 
    
 

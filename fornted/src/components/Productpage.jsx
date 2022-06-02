@@ -1,24 +1,49 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ProductSidebar from "./Productsidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { setproducts } from "../redux/actions";
 import { Stack, Rating } from "@mui/material";
 import Footer from "../components/Footer"
+import { Button } from "@mui/material";
 import axios from "axios";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
+import { navCart } from "../redux/actions";
+
 
 export const Productpage = () => {
   const dispatch = useDispatch();
   const store = useSelector((e) => e.MasaiReducer.sortedData);
   const mainData = useSelector((e) => e.MasaiReducer.product);
   const navigate = useNavigate();
+  const [cart, setCart] = useState({});
 
   useEffect(() => {
     axios.get("https://mernbablicommerce.herokuapp.com/products").then(({ data }) => {
       dispatch(setproducts(data));
     });
   }, []);
+  const handlesubmit = () => {
+    const payload = {
+      title: cart.title,
+      price: cart.price,
+      description: cart.description,
+      category: cart.category,
+      rating: cart.rating,
+      image: cart.image,
+    };
+    axios
+      .post("https://mernbablicommerce.herokuapp.com/cartproduct", payload)
+      .then(({ data }) => {
+        dispatch(navCart());
+        dispatch(navCart());
+       
+        
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
   
 
   return (
@@ -42,7 +67,7 @@ export const Productpage = () => {
                   cursor: "pointer",
                 }}
                 key={e._id}
-                onClick={() => navigate(`/product/${e._id}`)}
+               
               >
                 <img
                   src={e.image}
@@ -55,6 +80,7 @@ export const Productpage = () => {
                     justifyContent: "center",
                     alignItems: "center",
                   }}
+                  onClick={() => navigate(`/product/${e._id}`)}
                 />
                 <h3 style={{ fontSize: "14px", paddingLeft: "10px" }}>
                   {e.title}
@@ -69,7 +95,19 @@ export const Productpage = () => {
                 {/* <p style={{ color: "red", paddingLeft: "10px" }}>
                   20% off for students
                 </p> */}
-              <button>Card</button>
+                 <Button
+            variant="contained"
+            sx={{
+              bgcolor: "purple",
+              fontFamily: "sans-serif",
+              marginTop: "20px",
+              mb: "30px",
+            }}
+            onClick={handlesubmit}
+          >
+            Add to Cart
+          </Button>
+            
               </div>
             ))}
           </div>

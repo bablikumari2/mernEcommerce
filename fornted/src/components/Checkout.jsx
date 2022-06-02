@@ -49,7 +49,7 @@ export const Checkout = () => {
           toast.success("Address added now procced to payment", {
             position: "top-center",
           });
-          navigate("/cart");
+          navigate("/payment");
         })
         .catch((e) => {
           console.log(e.message);
