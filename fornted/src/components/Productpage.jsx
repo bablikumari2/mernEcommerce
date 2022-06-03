@@ -8,7 +8,7 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
-import { navCart } from "../redux/actions";
+
 
 
 export const Productpage = () => {
@@ -16,34 +16,15 @@ export const Productpage = () => {
   const store = useSelector((e) => e.MasaiReducer.sortedData);
   const mainData = useSelector((e) => e.MasaiReducer.product);
   const navigate = useNavigate();
-  const [cart, setCart] = useState({});
+  
 
   useEffect(() => {
     axios.get("https://mernbablicommerce.herokuapp.com/products").then(({ data }) => {
       dispatch(setproducts(data));
+     
     });
   }, []);
-  const handlesubmit = () => {
-    const payload = {
-      title: cart.title,
-      price: cart.price,
-      description: cart.description,
-      category: cart.category,
-      rating: cart.rating,
-      image: cart.image,
-    };
-    axios
-      .post("https://mernbablicommerce.herokuapp.com/cartproduct", payload)
-      .then(({ data }) => {
-        dispatch(navCart());
-        dispatch(navCart());
-       
-        
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  };
+  
   
 
   return (
@@ -103,9 +84,9 @@ export const Productpage = () => {
               marginTop: "20px",
               mb: "30px",
             }}
-            onClick={handlesubmit}
+            onClick={()=>navigate(`/product/${e._id}`)}
           >
-            Add to Cart
+           View Detail
           </Button>
             
               </div>

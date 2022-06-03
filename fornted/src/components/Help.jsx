@@ -64,7 +64,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export const Navbar = () => {
+export const Nav = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -214,7 +214,7 @@ export const Navbar = () => {
                 color="inherit"
               >
                 <Badge
-                  badgeContent={cartDataRedux.length}
+                //   badgeContent={cartDataRedux.length}
                   color="error"
                   sx={{ marginBottom: "35px" }}
                 ></Badge>

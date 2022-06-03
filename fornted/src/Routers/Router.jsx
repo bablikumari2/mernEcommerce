@@ -6,11 +6,13 @@ import {Routes,Route} from 'react-router-dom'
 import {Productdetail} from '../components/Productdetail'
 import { Signup } from '../components/Signup';
 import { Login } from '../components/login';
-import { Cart } from '../components/Cart';
 
+import { Card } from '../components/Card';
+import { Detail } from '../components/Deatail.jsx';
 import { Checkout } from '../components/Checkout';
-import { Showuser } from '../components/Showuser';
+
 import {Debit} from "../components/Pay"
+
 
 function Router() {
   return (
@@ -23,8 +25,11 @@ function Router() {
      <Route path="/product/:id" element={<Productdetail />} />
      <Route path="/register" element={<Signup />} />
      <Route path="/login" element={< Login/>} />
-     <Route path="/cart" element={<Cart />} />
+  
+     <Route path="/card" element={<Card />} />
      <Route path="/checkout" element={<Checkout />} />
+     
+     <Route path="/Detail" element={<Detail />} />
 
 
      

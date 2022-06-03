@@ -1,21 +1,15 @@
 import "./payment.css";
-import {
-  Box,
-  FormControl,
-  FormLabel,
-  FormControlLabel,
-  RadioGroup,
-  Radio,
-} from "@mui/material";
+
 import { useState, useEffect } from "react";
 import { Modal } from "./modal";
-import { useParams } from "react-router-dom";
+
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { navCart } from "../redux/actions";
+import { Nav } from "./Help";
 
-export const Cart = () => {
+export const Detail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -70,6 +64,7 @@ export const Cart = () => {
 
   return (
     <>
+    <Nav/>
       {modal && <Modal onClose={() => setModal(false)} />}
       <div className="container">
         <div style={{ width: "40%" }}>
@@ -104,24 +99,6 @@ export const Cart = () => {
           <hr></hr>
 
 
-          {/* <div className="Payment">
-            <p>Payment</p>
-          </div>
-          <div style={{ marginLeft: "30px" }}>
-            <div className="method">
-              <p>Add Payment Method</p>
-              <button
-                className="button"
-                style={{ marginLeft: "300px", marginTop: "10px" }}
-                onClick={() => {
-                  setModal(true);
-                }}
-              >
-                Edit
-              </button>
-            </div>
-            <hr></hr>
-          </div> */}
           <div style={{ marginLeft: "30px" }}>
            
             <hr></hr>
@@ -133,21 +110,7 @@ export const Cart = () => {
             {data.map((e) => (
               <div key={e._id}>
                 <div className="product_name">
-                  <select
-                    name="Remove"
-                    id="Remove"
-                    onChange={(ev) => handleChange(e._id, ev)}
-                  >
-                    <option>Quantity</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                  </select>
+                  
                   <p style={{ fontWeight: "500" }}>{e.title}</p>
                   <p
                     style={{
@@ -174,19 +137,7 @@ export const Cart = () => {
                   >
                     {e.category}
                   </p>
-                  <button
-                    onClick={() => handleRate(e._id)}
-                    style={{
-                      backgroundColor: "black",
-                      border: "none",
-                      outline: "none",
-                      color: "white",
-                      padding: "10px",
-                      borderRadius: "5px",
-                    }}
-                  >
-                    Remove from cart
-                  </button>
+                 
                 </div>
               </div>
             ))}
@@ -203,57 +154,16 @@ export const Cart = () => {
             >
               Place Order
             </button>
-            {/* <p style={{ fontSize: "15px", color: "grey" }}>
-              If you’re not around when the delivery person arrives, they’ll
-              leave your order at the door. By placing your order, you agree to
-              take full responsibility for it once it’s delivered.
-            </p> */}
+           
             <hr></hr>
           </div>
-          {/* <div className="offer_line">
-            <p>You're saving with a Rs 0 Delivery Fee until Apr 28</p>
-          </div>
-          <div className="subtotal">
-            <p>Subtotal</p>
-
-            <p style={{ fontSize: "15px" }}>
-              Rs{" "}
-              {data.reduce((acc, curr) => {
-                return acc + curr.qty * Math.ceil(+curr.price);
-              }, 0)}
-              .00 -/-
-            </p>
-          </div>
-          <div className="subtotal">
-            <p>Promotion</p>
-            <p style={{ color: "green" }}> - Rs 39.00-/-</p>
-          </div>
-          <div className="subtotal">
-            <p>Taxes & Fees</p>
-            <p style={{ fontSize: "15px" }}>Rs 57.00-/-</p>
-          </div>
-          <div className="subtotal">
-            <p>Delivery Fee</p>
-            <p style={{ fontSize: "15px" }}>Rs 49.00-/-</p>
-          </div>
-          <div className="subtotal">
-            <p>CA driver benefits</p>
-            <p style={{ fontSize: "15px" }}>Rs 29.00-/-</p>
-          </div>
-
-          <div className="subtotal">
-            <p>Temporary fuel surcharge</p>
-            <p style={{ fontSize: "15px" }}>Rs 19.00-/-</p>
-          </div>
-          <div style={{ width: "400px", marginLeft: "100px" }}>
-            <hr></hr>
-          </div> */}
+         
           <div className="total">
             <p>Total</p>
             <p style={{ marginRight: "24px" }}>
               Rs{" "}
               {data.reduce((acc, curr) => {
-                return acc + curr.qty * Math.ceil(+curr.price) + 154 / 2;
+                return acc + curr.qty * Math.ceil(+curr.price) ;
               }, 0)}{" "}
               -/-
             </p>

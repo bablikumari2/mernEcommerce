@@ -1,8 +1,8 @@
 .boxleft{
     border: 2px solid gray;
     width: 27%;
-    height: 75%;
-    margin-top: 18px;
+    height: 95%;
+    margin-top: 28px;
     margin-left: 585px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -21,12 +21,22 @@
     border: 3px solid;
     text-align: center;
     font-size: larger;
+    margin-left: 20px;
+}
+.inn{
+    width: 60%;
+    height: 30px;
+    /* border-radius: 10px; */
+    border: 3px solid;
+    text-align: center;
+    font-size: larger;
+    margin-left: 45px;
 }
 .small{
     border: 3px solid;
     height: 30px;
     width: 30%;
-    margin-left: 20px;
+    margin-left: 50px;
     
     text-align: center;
     font-size: larger;
@@ -50,6 +60,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     cursor: pointer;
+    margin-left: 60px;
     
 }
 .comfirm:hover{

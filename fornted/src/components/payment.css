@@ -113,12 +113,21 @@ svg{
     width:200px;
     margin-left:230px;
     line-height: 35px;
+   
 }
 .payment_detail{
     width:45%;
-    
+    margin-top: 70px;
     height:100%;
-    background-color:whitesmoke
+    /* background-color:whitesmoke */
+    
+}
+.payment_detailss{
+    width:45%;
+    margin-top: 70px;
+    height:100%;
+    margin-left: 300px;
+    /* background-color:whitesmoke */
     
 }
 .place_order{
@@ -130,7 +139,6 @@ svg{
   font-size:20px;
   font-family: sans-serif;
   border:none;
-  margin-top: 200px;
 }
 .payment_order{
     width:400px;
@@ -194,4 +202,14 @@ svg{
     border:none;
     background-color:black;
     color:white
+}
+.from{
+   
+  
+    border:"none";
+    height: 50px;
+    background-color: black;
+    color: #EEEEEE;
+    border-radius: 10px;
+  
 }

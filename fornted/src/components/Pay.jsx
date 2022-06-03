@@ -1,7 +1,7 @@
 
 import React from 'react'
 import "./Pay.css"
-
+import Footer from './Footer';
 
 import { useState } from 'react'
 
@@ -28,7 +28,7 @@ export const Debit = () => {
    
       axios.post(" https://mernbablicommerce.herokuapp.com/payment", data ).then(({ data }) => {
         alert("payment secuessfully");
-        navigate("/cart")
+        navigate("/checkout")
       }).catch((err)=>{
         console.log(err)
       })
@@ -41,13 +41,15 @@ export const Debit = () => {
         <div className='boxleft'>
           <div className='photo'>
           </div><br />
+          <label>Card Holder</label>
           <input type="text" className='in' placeholder="Card Owner's name*" required /><br /><br />
-
-          <input type="number" className='in' placeholder='Card Number*' required id="card_no"
+<label>Card No.</label>
+          <input type="number" className='inn' placeholder='Card Number*' required id="card_no"
 
             onChange={handlechange}
             value={data.card_no} /><br /><br />
-          <input type="password" className='small' placeholder='Enter CVV*' id="cvv"
+            <label>CVV</label>
+          <input type="number" className='small' placeholder='Enter CVV*' id="cvv"
 
             onChange={handlechange}
             value={data.cvv} required />
@@ -62,6 +64,6 @@ export const Debit = () => {
 
       </div>
     </form>
-
+<Footer/>
   </>
 }

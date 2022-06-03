@@ -1,5 +1,5 @@
 import "./model.css";
-import { Debit } from "./debitcart";
+// import { Debit } from "./debitcart";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ export const Modal = ({ onClose }) => {
       {data ? (
         <>
           {" "}
-          <Debit />{" "}
+          {/* <Debit />{" "} */}
         </>
       ) : (
         <>

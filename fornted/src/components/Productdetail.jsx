@@ -14,7 +14,8 @@ export const Productdetail = () => {
   const store = useSelector((e) => e.MasaiReducer.selectedproduct);
   const navigate = useNavigate();
   const [cart, setCart] = useState({});
-  
+  const [arr, setArr] = useState([])
+  const [flag, setFlag] = useState(false)
 
   let { id } = useParams();
 
@@ -22,9 +23,21 @@ export const Productdetail = () => {
     axios.get(`https://mernbablicommerce.herokuapp.com/products/${id}`).then(({ data }) => {
       dispatch(selectedproduct(data));
 
+
       setCart(data);
     });
   }, []);
+  useEffect(() => {
+    axios.get(`https://mernbablicommerce.herokuapp.com/cartproduct`).then(({ data }) => {
+      setArr(data)
+      if(arr.filter((e)=> e._id = store._id)){
+        setFlag(true)
+        // alert("Item already added to the cart")
+      }
+    });
+  }, []);
+  console.log(arr)
+  
   const handlesubmit = () => {
     const payload = {
       title: cart.title,
@@ -39,7 +52,7 @@ export const Productdetail = () => {
       .then(({ data }) => {
         dispatch(navCart());
         dispatch(navCart());
-        navigate("/checkout");
+        navigate("");
         
       })
       .catch((e) => {
@@ -64,7 +77,6 @@ export const Productdetail = () => {
           <Typography variant="body1" sx={{ lineHeight: "25px" }}>
             {store.description}
           </Typography>
-
           <Button
             variant="contained"
             sx={{
@@ -77,6 +89,7 @@ export const Productdetail = () => {
           >
             Add to Cart
           </Button>
+          
          <Link to={"/product"}> <Button
            variant="contained"
            sx={{

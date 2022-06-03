@@ -14,8 +14,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Navigate, useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { navCart } from "../redux/actions";
+
 import Footer from "./Footer";
+import { Nav } from "./Help";
 
 export const Checkout = () => {
   const dispatch = useDispatch();
@@ -49,7 +50,7 @@ export const Checkout = () => {
           toast.success("Address added now procced to payment", {
             position: "top-center",
           });
-          navigate("/payment");
+          navigate("/Detail");
         })
         .catch((e) => {
           console.log(e.message);
@@ -57,28 +58,19 @@ export const Checkout = () => {
         });
     }
   };
-  useEffect(() => {
-    handleCartDetail();
-  }, []);
-  const handleCartDetail = () => {
-    axios.get("https://mernbablicommerce.herokuapp.com/cartproduct").then(({ data }) => {
-      setCart(data);
-    });
-  };
-  const handleRate = (id) => {
-    axios.delete(`https://mernbablicommerce.herokuapp.com/cartproduct/${id}`).then((res) => {
-      handleCartDetail();
-      dispatch(navCart());
-    });
-  };
+  
 
   const handleChange = (isExpanded, panel) => {
     setExpanded(isExpanded ? panel : false);
   };
   return (
     <>
-      <div style={{ display: "flex", gap: "20px" }}>
-        <div style={{ width: "50%" }}>
+    <Nav/>
+    <h1>Fill the shipping Address</h1>
+      <div >
+       
+        <div style={{ width: "50%", marginLeft: "300px" }}>
+        <h1>Fill the shipping Address</h1>
           <Accordion
             id="accordion"
             expanded={expanded === "panel1"}
@@ -151,64 +143,7 @@ export const Checkout = () => {
           </Button>
         </div>
 
-        <Paper>
-          <div style={{ marginTop: "80px" }}>
-            <div
-              style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)" }}
-            >
-              {cart.map((e) => (
-                <div>
-                  <div style={{ textAlign: "center" }} key={e.id}>
-                    <p style={{ fontWeight: "500", fontSize: "14px" }}>
-                      {e.title}
-                    </p>
-                  </div>
-                  <div style={{ textAlign: "center" }}>
-                    <img
-                      src={e.image}
-                      alt=""
-                      style={{ width: "16%", height: "50%" }}
-                    />
-                    <p
-                      style={{
-                        fontWeight: "500",
-                        fontSize: "20px",
-                        color: "green",
-                        margin: "0px",
-                      }}
-                    >
-                      Rs {e.price} -/-
-                    </p>
-
-                    <p
-                      style={{
-                        margin: "10px",
-                        fontSize: "14px",
-                        fontWeight: "500",
-                      }}
-                    >
-                      {e.category}
-                    </p>
-                    <button
-                      onClick={() => handleRate(e._id)}
-                      style={{
-                        marginBottom: "10px",
-                        backgroundColor: "black",
-                        border: "none",
-                        outline: "none",
-                        color: "white",
-                        padding: "10px",
-                        borderRadius: "5px",
-                      }}
-                    >
-                      Remove from cart
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Paper>
+      
       </div>
 
       <ToastContainer />

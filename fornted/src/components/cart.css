@@ -1,0 +1,24 @@
+.photo1{
+    
+    width: 150px;
+
+}
+table {
+    margin: 20px ;
+    /* text-align: center; */
+    font-size: 16px;
+    font-weight: 500;
+    backdrop-filter: blur(7px);
+  }
+  th {
+    padding: 8px 70px;
+    background-color: #340c80;
+    margin-right: 10%;
+    color: #fbf8f1;
+    font-size: 18px;
+    font-weight: 550;
+  }
+  
+  td {
+    border-bottom: 1px solid #54bab9;
+  }
