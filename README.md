@@ -3,7 +3,7 @@
 This project is a clone of E-commerce.com which is well known online shopping store. The company specializes in fast fashion, and products include clothing, accessories, shoes, beauty products and many more things.
 
 ## Deploy Link :
-https://e-commerce-chi-black.vercel.app/
+https://babli-ecommerce.vercel.app/
 
 ## Tech Stack :
 
