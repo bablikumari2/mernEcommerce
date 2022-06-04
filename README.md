@@ -31,7 +31,7 @@ You can see Login and Create Account page. We used some NPM packages to authoriz
 
 ![Screenshot (1574)](https://github.com/bablikumari2/mernEcommerce/blob/main/fornted/public/Image/Screenshot%20(359).png?raw=true)
 
-![Screenshot (1575)](https://github.com/masai-course/babli_fw14_032/blob/master/unit-6/e-commerce/public/img/Screenshot%20(347).png?raw=true)
+![Screenshot (1575)](https://github.com/bablikumari2/mernEcommerce/blob/main/fornted/public/Image/Screenshot%20(372).png?raw=true)
 
 ## Product Page :
 There are  categories user can find their products according to their need . We have added products from original website and categorized them into different section.
