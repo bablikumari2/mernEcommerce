@@ -30,4 +30,13 @@ router.delete("/cartproduct/:id",async (req,res)=>{
         res.status(400).send(e.message)
     }
 })
+router.patch("/cartproduct/:id",async (req,res)=>{
+
+    try{
+        const order=await Order.findByIdAndUpdate(req.params.id, req.body, {new : true})
+        return res.status(201).json({status:"success",message:"updated successfully",order:order})
+    }catch(e){
+        res.status(400).send(e.message)
+    }
+})
 module.exports=router
